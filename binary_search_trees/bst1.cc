@@ -5,10 +5,10 @@
 
 struct node {
   int key;
-  std::shared_ptr<node> parent;
+  std::weak_ptr<node> parent;
   std::shared_ptr<node> left;
   std::shared_ptr<node> right;
-  node(int k) : key(k), parent(nullptr), left(nullptr), right(nullptr) {};
+  node(int k) : key(k), left(nullptr), right(nullptr) {};
 };
 
 class bst {
